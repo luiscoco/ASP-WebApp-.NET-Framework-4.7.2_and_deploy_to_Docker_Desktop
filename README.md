@@ -343,6 +343,8 @@ We also verify the docker image in Docker Desktop
 
 ![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/eefd6e1d-bea2-4e37-b857-9cc8eb150246)
 
+## 5. Run your application with protocol HTTP
+
 Now we can run the docker image with this command
 
 ```
@@ -363,7 +365,9 @@ We can also verify the running docker container in Docker Desktop
 
 ![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/ed52dbb2-e347-41a4-9d93-07582d7bc204)
 
+## 6. Run your application with protocol HTTPS
 
+We first create a certificate
 
 
 
