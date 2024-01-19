@@ -164,7 +164,7 @@ Bundling and minification are features that help improve request load time by re
 
 Overall, this MvcApplication class is central to setting up important aspects of the ASP.NET MVC web application when it starts, ensuring that areas, filters, routes, and bundles are all registered and ready to use.
 
-### 3.2. The RouterConfig.cs file
+### 3.2. The Global.asax calls the App_Start/RouterConfig.cs file
 
 In this file we configure the default entry point in my web application. 
 
@@ -198,7 +198,7 @@ namespace WebApplication1
 }
 ```
 
-### 3.3. HomeController.cs file
+### 3.3. The WebApp default entry point automatically calls the Controllers/HomeController.cs file
 
 When the application starts with the default route: https://localhost:44327/Home/Index
 
@@ -221,7 +221,7 @@ namespace WebApplication1.Controllers
         }
 ```
 
-### 3.4. Index.cshtml view
+### 3.4. The Index action inside the HomeController calls the Views/Home/Index.cshtml view
 
 ```html
 @{
@@ -257,4 +257,48 @@ namespace WebApplication1.Controllers
         </section>
     </div>
 </main>
+```
+
+### 3.5. The Views/Home/Index.cshtml view is rendered inside the Views/Shared/_Layout.cshtml view
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
 ```
