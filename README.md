@@ -339,6 +339,10 @@ docker build -t webapplication1 .
 
 ![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/9e4d8f0c-f491-49ef-9735-e7e9794a88fc)
 
+We also verify the docker image in Docker Desktop
+
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/eefd6e1d-bea2-4e37-b857-9cc8eb150246)
+
 Now we can run the docker image with this command
 
 ```
@@ -353,7 +357,11 @@ http://localhost:8080/
 
 We see the application running
 
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/7ad80aa8-e45f-4ea4-b84a-c8de3ba9c969)
 
+We can also verify the running docker container in Docker Desktop
+
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/ed52dbb2-e347-41a4-9d93-07582d7bc204)
 
 
 
