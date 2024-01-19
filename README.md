@@ -1,4 +1,4 @@
-# How to create my first ASP WebApp with .NET Framework 7.2 and how to deploy in a local Docker container
+# How to create my first ASP WebApp with .NET Framework 7.2 and how to deploy to Docker Desktop (in your local laptop)
 
 ## 1. Run Visual Studio and create the WebApp
 
