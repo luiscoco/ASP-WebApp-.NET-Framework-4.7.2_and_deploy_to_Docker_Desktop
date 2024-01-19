@@ -104,6 +104,10 @@ If your application is part of a larger solution, this file ties together the va
 
 ## 3. Workflow after running the WebApp
 
+This is the workflow summary:
+
+**Global.asax** -> **App_Start/RouterConfig.cs** -> **https://localhost:44327/Home/Index** -> Call Index action inside the Home controller **Controllers/HomeController.cs** -> Call Home view (**Views/Home/Index.cshtml**) -> the Index.cshtl view is Rendered inside the **Views/Shared/_Layout.cshtml** as defined in _ViewStart.cshtml
+
 ### 3.1. When we run the application the first file we start is **Global.asax**
 
 ```
@@ -193,3 +197,7 @@ namespace WebApplication1
     }
 }
 ```
+
+### 3.3.
+
+
