@@ -39,3 +39,33 @@ namespace WebApplication1
     }
 }
 ```
+
+The **Application_Start** method is a special method in ASP.NET. 
+
+**It is automatically called by the framework when the web application starts**. 
+
+This method is typically used to perform application-level **initializations**, such as configuring routes, filters, and bundles:
+
+**AreaRegistration.RegisterAllAreas()**
+
+This line registers all areas in the application. Areas are an ASP.NET MVC feature that helps organize a large application into smaller functional groupings.
+
+**FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters)**
+
+This line registers global filters. Filters in ASP.NET MVC can be used for cross-cutting concerns like logging, exception handling, and authorization. 
+
+Global filters are applied to all controllers and actions.
+
+**RouteConfig.RegisterRoutes(RouteTable.Routes)**
+
+This configures the URL routing for the application. Routing is how ASP.NET MVC matches a URI to an action method in a controller. 
+
+RegisterRoutes method sets up the routes that the application recognizes.
+
+**BundleConfig.RegisterBundles(BundleTable.Bundles)**
+
+This registers bundles for JavaScript and CSS files. 
+
+Bundling and minification are features that help improve request load time by reducing the number of requests to the server and reducing the size of requested assets (like CSS and JavaScript).
+
+Overall, this MvcApplication class is central to setting up important aspects of the ASP.NET MVC web application when it starts, ensuring that areas, filters, routes, and bundles are all registered and ready to use.
