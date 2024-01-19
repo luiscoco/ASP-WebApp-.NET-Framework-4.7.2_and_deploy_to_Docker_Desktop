@@ -365,9 +365,5 @@ We can also verify the running docker container in Docker Desktop
 
 ![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/ed52dbb2-e347-41a4-9d93-07582d7bc204)
 
-## 6. Run your application with protocol HTTPS
-
-We first create a certificate
-
 
 
