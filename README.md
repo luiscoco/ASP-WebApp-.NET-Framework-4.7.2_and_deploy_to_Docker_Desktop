@@ -110,7 +110,7 @@ This is the workflow summary:
 
 ### 3.1. When we run the application the first file we start is **Global.asax**
 
-```
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -172,7 +172,7 @@ In this case we call the Index action inside the Home controller
 
 This is the web application entry point: https://localhost:44327/Home/Index
 
-```
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -198,6 +198,31 @@ namespace WebApplication1
 }
 ```
 
-### 3.3.
+### 3.3. HomeController.cs file
 
+When the application starts with the default route: https://localhost:44327/Home/Index
 
+automatically the Index action inside the Home controller is invoked
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace WebApplication1.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
+```
+
+### 3.4. Index.cshtml view
+
+```
+
+```
