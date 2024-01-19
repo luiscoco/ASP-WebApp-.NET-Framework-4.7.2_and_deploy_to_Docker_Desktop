@@ -14,4 +14,28 @@ We chose the new project main features
 
 ![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/9dff42cd-5778-413e-aef1-cd28a8dbb981)
 
-The 
+When we run the application the first file we start is **Global.asax**
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Optimization;
+using System.Web.Routing;
+
+namespace WebApplication1
+{
+    public class MvcApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+    }
+}
+```
