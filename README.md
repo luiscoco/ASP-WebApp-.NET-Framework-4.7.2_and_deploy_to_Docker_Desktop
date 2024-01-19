@@ -160,4 +160,36 @@ Bundling and minification are features that help improve request load time by re
 
 Overall, this MvcApplication class is central to setting up important aspects of the ASP.NET MVC web application when it starts, ensuring that areas, filters, routes, and bundles are all registered and ready to use.
 
-### 3.2. 
+### 3.2. The RouterConfig.cs file
+
+In this file we configure the default entry point in my web application. 
+
+In this case we call the Index action inside the Home controller
+
+This is the web application entry point: https://localhost:44327/Home/Index
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
+
+namespace WebApplication1
+{
+    public class RouteConfig
+    {
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+        }
+    }
+}
+```
