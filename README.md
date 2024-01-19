@@ -30,6 +30,8 @@ It's a secure folder that is not accessible directly via URLs.
 
 **App_Start**
 
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/e3a4eaa7-b4ad-4c4e-9ec0-19f899d70330)
+
 Contains class files which are executed at application start. 
 
 Common files include **RouteConfig.cs** for routing configuration, **BundleConfig.cs** for bundling and minification of CSS and JS files, etc.
@@ -55,6 +57,8 @@ These models often correspond to database tables.
 Stores JavaScript files and libraries, such as jQuery, Bootstrap JS, etc.
 
 **Views**
+
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/3736745e-65b6-41ff-ad43-b3675201d0fa)
 
 Holds the Razor view files for the application. It's typically structured into subfolders corresponding to the controllers.
 
