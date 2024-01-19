@@ -305,11 +305,57 @@ namespace WebApplication1.Controllers
 
 ## 4. Adding docker support to the WebApp application
 
-We right click on project name and we select the option **Add->Docker support...**
+We create a Dockerfile as shown in the following picture
 
-![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/361cc593-5800-464f-aa00-6f29476c6947)
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/664aa16d-77f4-470f-b5b8-217981c88e1b)
 
-If we didn't start before the Docker Desktop the following message will appear
+This is the **Dockerfile** source code
 
-![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/8d2f83f3-d3f5-4240-b28a-647b7f6ab4e2)
+```
+# Use a Windows image with .NET Framework 4.7.2
+FROM mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2019
+
+# Set the working directory
+WORKDIR /inetpub/wwwroot
+
+# Copy the application files from your host to your container
+COPY ./WebApplication1 .
+
+# Expose the port the app runs on
+EXPOSE 80
+
+# The final command to run your application will be in the base image
+```
+
+We type **cmd** to open a command prompt window 
+
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/96863611-7525-4d1d-9a16-f5d6ef3e295d)
+
+We create the docker image with the following command
+
+```
+docker build -t webapplication1 .
+```
+
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/9e4d8f0c-f491-49ef-9735-e7e9794a88fc)
+
+Now we can run the docker image with this command
+
+```
+docker run -d -p 8080:80 --name myapp webapplication1
+```
+
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/15981131-e262-4b46-8c6f-1b9ed05138f8)
+
+We verify the application running navigating in the internet web browser to this endpoint: 
+
+http://localhost:8080/
+
+We see the application running
+
+
+
+
+
+
 
