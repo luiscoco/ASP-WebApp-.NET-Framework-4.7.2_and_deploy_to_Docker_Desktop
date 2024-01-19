@@ -20,6 +20,8 @@ We chose the new project main features
 
 ### 2.1. Default Folder Structure
 
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/fd781122-ebaa-4aa4-9bb0-e1c64e736d2e)
+
 **App_Data**
 
 Used to store application data files like local databases, XML files, etc. 
