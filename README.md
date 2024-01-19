@@ -104,7 +104,7 @@ If your application is part of a larger solution, this file ties together the va
 
 ## 3. Workflow after running the WebApp
 
-When we run the application the first file we start is **Global.asax**
+### 3.1. When we run the application the first file we start is **Global.asax**
 
 ```
 using System;
@@ -159,3 +159,5 @@ This registers bundles for JavaScript and CSS files.
 Bundling and minification are features that help improve request load time by reducing the number of requests to the server and reducing the size of requested assets (like CSS and JavaScript).
 
 Overall, this MvcApplication class is central to setting up important aspects of the ASP.NET MVC web application when it starts, ensuring that areas, filters, routes, and bundles are all registered and ready to use.
+
+### 3.2. 
