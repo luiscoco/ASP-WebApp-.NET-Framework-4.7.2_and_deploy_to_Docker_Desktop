@@ -1,4 +1,6 @@
-# How to create a ASP WebApp .NET Framework 7.2
+# How to create my first ASP WebApp .NET Framework 7.2
+
+## 1. Run Visual Studio and create the WebApp
 
 We run Visual Studio 2022 Community Edition and we create a new project
 
@@ -13,6 +15,61 @@ We input the location and the project name
 We chose the new project main features
 
 ![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/9dff42cd-5778-413e-aef1-cd28a8dbb981)
+
+## 2. Project folder structure and main files description
+
+### 2.1. Default Folder Structure
+
+**App_Data**
+
+Used to store application data files like local databases, XML files, etc. 
+
+It's a secure folder that is not accessible directly via URLs.
+
+**App_Start**
+
+Contains class files which are executed at application start. 
+
+Common files include **RouteConfig.cs** for routing configuration, **BundleConfig.cs** for bundling and minification of CSS and JS files, etc.
+
+**Content**
+
+Houses **CSS** files and other static content like **images**.
+
+**Controllers**
+
+Contains Controller classes. 
+
+Controllers respond to HTTP requests and execute appropriate actions.
+
+**Models**
+
+Contains classes representing data models. 
+
+These models often correspond to database tables.
+
+**Scripts**
+
+Stores JavaScript files and libraries, such as jQuery, Bootstrap JS, etc.
+
+**Views**
+
+Holds the Razor view files for the application. It's typically structured into subfolders corresponding to the controllers.
+
+**_ViewStart.cshtml** - Contains common view settings; executed before the rendering of each view.
+
+**_Layout.cshtml** - Common layout file (like a template) used by other views.
+
+**Fonts**
+
+(Optional) For custom fonts used in your application.
+
+**bin**
+
+Contains the compiled assemblies (DLLs) including your application’s code.
+
+
+## 3. Workflow after running the WebApp
 
 When we run the application the first file we start is **Global.asax**
 
