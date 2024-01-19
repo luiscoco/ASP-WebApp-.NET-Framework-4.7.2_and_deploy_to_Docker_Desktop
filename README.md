@@ -308,3 +308,8 @@ namespace WebApplication1.Controllers
 We right click on project name and we select the option **Add->Docker support...**
 
 ![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/361cc593-5800-464f-aa00-6f29476c6947)
+
+If we didn't start before the Docker Desktop the following message will appear
+
+![image](https://github.com/luiscoco/ASP-WebApp-.NET-Framework-7.2/assets/32194879/8d2f83f3-d3f5-4240-b28a-647b7f6ab4e2)
+
