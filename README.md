@@ -74,6 +74,33 @@ Holds the Razor view files for the application. It's typically structured into s
 
 Contains the compiled assemblies (DLLs) including your application’s code.
 
+### 2.2. Main Files
+
+Global.asax
+
+Allows you to write code that responds to system-level events, such as application start and end.
+
+Web.config
+
+The main configuration file for the application. It includes settings for databases, security configurations, custom error pages, etc.
+
+Package.config
+
+Lists the NuGet packages used in the project.
+
+Other Files and Folders
+
+Properties
+
+Contains the AssemblyInfo.cs file which includes metadata like version number, company name, etc.
+
+.csproj or .vbproj file
+
+The project file which includes references to all the other files and folders in your project. It's used by Visual Studio to build your application.
+
+Solution (.sln) file
+
+If your application is part of a larger solution, this file ties together the various projects.
 
 ## 3. Workflow after running the WebApp
 
